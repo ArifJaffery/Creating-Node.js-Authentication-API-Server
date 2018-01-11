@@ -4,20 +4,23 @@ import {iuser} from '../../../api';
 
 
 @Component({
-    selector: 'login',
     templateUrl: './login-component.html'
 })
 export class LoginComponent extends FormGroup implements OnInit{
 
     constructor(private fb:FormBuilder){
         super({
-            username:new FormControl('abc'),
-            password:new FormControl('xyz')
+            username:new FormControl(''),
+            password:new FormControl('')
         });
     }
 
     ngOnInit(){
 
+    }
+
+    loginBtnClickFn=()=>{
+        console.log(this.value);
     }
 
 }
